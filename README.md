@@ -4,7 +4,7 @@
 ## usersテーブル
 |column|type|options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false, index: true|
 |address|string|null: false|
 |pass|string|null: false|
 
@@ -16,7 +16,7 @@ _ has_many :comments
 ## groupsテーブル
 |column|type|options|
 |------|----|-------|
-|group_name|string|null: false|
+|name|string|null: false|
 
 ## Association
 _ has_many :groups_users
@@ -26,8 +26,8 @@ _ has_many :comments
 ## groups_usersテーブル
 |column|type|options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ## Association
 _ belongs_to :group
@@ -36,9 +36,10 @@ _ belongs_to :user
 ## commentsテーブル
 |column|type|options|
 |------|----|-------|
-|comment|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|comment|string|
+|image|string|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 ## Association
 _ belongs_to :group
