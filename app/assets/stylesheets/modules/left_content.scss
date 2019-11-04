@@ -1,7 +1,7 @@
 .left_content{
   box-sizing: border-box;
   width: 300px;
-  color: #ffffff;
+  color: $white;
   .top{
     height: 100px;
     background-color: #253141;
@@ -21,7 +21,7 @@
       right: 20px;
       transform: translateY(-50%);
       .icon{
-        color: white;
+        color: $white;
       }
     }
   }
@@ -33,10 +33,10 @@
       font-weight: bold;
       padding: 20px 0 40px;
       &__name{
-        font-size: 15px;
+        font-size: $left_group;
       }
       &__message{
-        font-size: 11px;
+        font-size: $left_message;
         margin: 5px 0 0 0;
       }
     }

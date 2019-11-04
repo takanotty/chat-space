@@ -23,8 +23,8 @@
       height: 40px;
       padding: 0 20px;
       margin: 28px 0 0 0;
-      color: #38AEF0;
-      border: 1px solid #38AEF0;
+      color: $blue;
+      border: 1px solid $blue;
       line-height: 40px;
     }
   }
@@ -37,20 +37,20 @@
     .upper-message{
       display: flex;
       &__user-name{
-        font-size: 16px;
+        font-size: $message_user_size;
         font-weight: bold;
-        color: #434A54;
+        color: $message_color;
       }
       &__time{
         margin: 0 0 0 10px;
-        font-size: 12px;
-        color: #999999;
+        font-size: $update_time_size;
+        color: $update_time_color;
       }
     }
     .lower-message{
       &__content{
-        font-size: 14px;
-        color: #434A54;
+        font-size: $message_size;
+        color: $message_color;
         padding: 10px 0 40px 0;
       }
     }
@@ -93,8 +93,8 @@
         height: 50px;
         width: 100px;
         margin-left: 15px;
-        color: white;
-        background-color: #38AEF0;
+        color: $white;
+        background-color: $blue;
         border: none;
       }
     }
