@@ -1,0 +1,102 @@
+.chat{
+  width: calc(100% - 300px);
+  .top{
+    height: 100px;
+    padding: 0 40px;
+    border-color: #eeeeee;
+    box-sizing: border-box;
+    .left-block{
+      float: left;
+      &__group{
+        font-size: 20px;
+        color: #333333;
+        padding: 35px 0 15px;
+      }
+      &__member{
+        font-size: 12px;
+        color: #999999;
+        display: flex;
+      }
+    }
+    .right-block{
+      float: right;
+      height: 40px;
+      padding: 0 20px;
+      margin: 28px 0 0 0;
+      color: $blue;
+      border: 1px solid $blue;
+      line-height: 40px;
+    }
+  }
+  .messages{
+    box-sizing: border-box;
+    padding: 46px 40px;
+    background-color: #fafafa;
+    height: calc(100vh - 190px);
+    padding: 46px 40px;
+    .upper-message{
+      display: flex;
+      &__user-name{
+        font-size: $message_user_size;
+        font-weight: bold;
+        color: $message_color;
+      }
+      &__time{
+        margin: 0 0 0 10px;
+        font-size: $update_time_size;
+        color: $update_time_color;
+      }
+    }
+    .lower-message{
+      &__content{
+        font-size: $message_size;
+        color: $message_color;
+        padding: 10px 0 40px 0;
+      }
+    }
+  }
+  .form{
+    background-color: #dddddd;
+    box-sizing: border-box;
+    height: 90px;
+    padding: 20px 40px 20px;
+    &__message{
+      width: 100%;
+      position: relative;
+      display: flex;
+      &__box{
+        height: 50px;
+        width: calc(100% - 65px);  
+        display: flex;
+        position: relative;
+        &__text{
+          height: 50px;
+          width: 100%;
+          padding: 0 40px 0 10px;
+          border: none;
+        }
+        &__image{
+          height: 50px;
+          font-size: inherit;
+          position: absolute;
+          right: 10px;
+          .fa{
+            font-size: 20px;
+            margin: 15px 0px;
+          }
+          .file{
+            display: none;
+          }
+        }
+      }
+      &__submit{
+        height: 50px;
+        width: 100px;
+        margin-left: 15px;
+        color: $white;
+        background-color: $blue;
+        border: none;
+      }
+    }
+  }
+}

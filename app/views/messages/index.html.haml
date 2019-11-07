@@ -1,0 +1,48 @@
+.header
+  
+.wrapper
+  = render 'left_content'
+
+  .chat
+    .top
+      .left-block
+        .left-block__group
+          グループ名
+        %ul.left-block__member
+          %li.member
+            メンバー名
+          %li.member
+            メンバー名
+          %li.member
+            メンバー名
+      .right-block
+        Edit
+    .messages
+      .message
+        .upper-message
+          .upper-message__user-name
+            ユーザー名
+          .upper-message__time
+            2019/11/3(sat) 13:08:01
+        .lower-message
+          .lower-message__content
+            メッセージ
+        .upper-message
+          .upper-message__user-name
+            ユーザー名
+          .upper-message__time
+            2019/11/3(sat) 13:10:51
+        .lower-message
+          .lower-message__content
+            メッセージ
+    .form
+      .form__message
+        .form__message__box
+          %input.form__message__box__text{type: 'text', placeholder: 'type a message'}
+          %label.form__message__box__image
+            = fa_icon 'picture-o', class: 'icon'
+            %input.file{type: 'file'}
+        %input.form__message__submit{type: 'submit', value: 'send'} 
+
+
+      
