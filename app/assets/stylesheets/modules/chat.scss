@@ -14,7 +14,7 @@
       }
       &__member{
         font-size: 12px;
-        color: #999999;
+        color: $light_gray;
         display: flex;
       }
     }
@@ -23,8 +23,8 @@
       height: 40px;
       padding: 0 20px;
       margin: 28px 0 0 0;
-      color: $blue;
-      border: 1px solid $blue;
+      color: $light_blue;
+      border: 1px solid $light_blue;
       line-height: 40px;
     }
   }
@@ -39,18 +39,18 @@
       &__user-name{
         font-size: $message_user_size;
         font-weight: bold;
-        color: $message_color;
+        color: $black;
       }
       &__time{
         margin: 0 0 0 10px;
         font-size: $update_time_size;
-        color: $update_time_color;
+        color: $light_gray;
       }
     }
     .lower-message{
       &__content{
         font-size: $message_size;
-        color: $message_color;
+        color: $black;
         padding: 10px 0 40px 0;
       }
     }
@@ -94,7 +94,7 @@
         width: 100px;
         margin-left: 15px;
         color: $white;
-        background-color: $blue;
+        background-color: $light_blue;
         border: none;
       }
     }
