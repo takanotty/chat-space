@@ -7,14 +7,13 @@
     .top
       .left-block
         .left-block__group
-          グループ名
+          = @group_name
         %ul.left-block__member
           %li.member
-            メンバー名
-          %li.member
-            メンバー名
-          %li.member
-            メンバー名
+            Member:
+            - @group_member.each do |member|
+              %li.member
+                = member.name
       .right-block
         Edit
     .messages
