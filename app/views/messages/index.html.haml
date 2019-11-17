@@ -36,13 +36,14 @@
           .lower-message__content
             メッセージ
     .form
-      .form__message
-        .form__message__box
-          %input.form__message__box__text{type: 'text', placeholder: 'type a message'}
-          %label.form__message__box__image
-            = fa_icon 'picture-o', class: 'icon'
-            %input.file{type: 'file'}
-        %input.form__message__submit{type: 'submit', value: 'send'} 
+      = form_for [@group, @message] do |f|
+        .form__message
+          .form__message__box
+            = f.text_field :content, class: 'form__message__box__text', placeholder: 'type a message'
+            = f.label :image, class: 'form__message__box__image' do
+              = fa_icon 'picture-o', class: 'icon'
+              = f.file_field :image, class: 'file'
+          = f.submit 'send' ,class: 'form__message__submit'
 
 
       
