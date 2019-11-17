@@ -15,7 +15,7 @@
               %li.member
                 = member.name
       .right-block
-        Edit
+        = link_to 'Edit', edit_group_path(@group), class: 'edit'
     .messages
       .message
         .upper-message
