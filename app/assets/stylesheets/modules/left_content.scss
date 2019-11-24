@@ -34,10 +34,14 @@
       padding: 20px 0 40px;
       &__name{
         font-size: $left_group;
+        color: $white;
+        text-decoration: none;
       }
       &__message{
         font-size: $left_message;
         margin: 5px 0 0 0;
+        color: $white;
+        text-decoration: none;
       }
     }
   }
