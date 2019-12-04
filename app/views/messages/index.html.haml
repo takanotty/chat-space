@@ -30,7 +30,7 @@
                 =message.content
             = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
     .form
-      = form_for [@group, @message] do |f|
+      = form_for [@group, @message], html: {class: 'js-form'} do |f|
         .form__message
           .form__message__box
             = f.text_field :content, class: 'form__message__box__text', placeholder: 'type a message'
