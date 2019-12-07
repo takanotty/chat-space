@@ -17,8 +17,8 @@
       .right-block
         = link_to 'Edit', edit_group_path(@group), class: 'edit'
     .messages
-      .message
-        - @messages.each do |message|
+      - @messages.each do |message|
+        .message{data: {message_id: "#{message.id}"}}
           .upper-message
             .upper-message__user-name
               = message.user.name
