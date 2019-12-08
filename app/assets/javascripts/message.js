@@ -1,37 +1,38 @@
 $(function(){
   var buildHTML = function(message){
-    var format = `<div class="message" data-message_id=` + message.id + `>` +
-    `<div class="upper-message">` +
-      `<div class="upper-message__user-name">` +
-        message.user_name +
-      `</div>` +
-      `<div class="upper-message__time">` +
-        message.created_at+
-      `</div>` +
-    `</div>` 
+    var format =
+     `<div class="message" data-message-id=${message.id}>
+        <div class="upper-message">
+          <div class="upper-message__user-name">
+            ${message.user_name}
+          </div>
+          <div class="upper-message__time">
+            ${message.created_at}
+          </div>
+        </div> `
     if (message.content && message.image) {
       var html = format +
-        `<div class="lower-message">` +
-          `<p class="lower-message__content">` +
-            message.content +
-          `</p>` +
-          `<img src="` + message.image + `" class="lower-message__image" >` +
-        `</div>` +
-      `</div>`
+        `<div class="lower-message">
+          <p class="lower-message__content">
+            ${message.content}
+          </p>
+          <img src=${message.image} class="lower-message__image" >
+        </div>
+      </div>`
     } else if (message.content) {
       var html = format +
-        `<div class="lower-message">` +
-          `<p class="lower-message__content">` +
-            message.content +
-          `</p>` +
-        `</div>` +
-      `</div>`
+        `<div class="lower-message">
+          <p class="lower-message__content">
+            ${message.content}
+          </p>
+        </div>
+      </div>`
     } else if (message.image) {
       var html = format +
-        `<div class="lower-message">` +
-          `<img src="` + message.image + `" class="lower-message__image" >` +
-        `</div>` +
-      `</div>`
+        `<div class="lower-message">
+          <img src=${message.image} class="lower-message__image" >
+        </div>
+      </div>`
     };
     return html;
   };
@@ -60,7 +61,8 @@ $(function(){
       return false;
   });
   var reloadMessages = function() {
-    last_message_id = $('.message').last().data('message_id');
+    last_message_id = $('.message').last().data('messageId');
+    console.log(last_message_id)
     $.ajax({
       url: "./api/messages",
       type: 'get',
@@ -76,7 +78,7 @@ $(function(){
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight}, 'fast');
     })
     .fail(function() {
-      console.log('error');
+      alert('error');
     });
   };
   var reloadPage = /messages$/;
